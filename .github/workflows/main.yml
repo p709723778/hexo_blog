@@ -15,3 +15,13 @@ jobs:
     - name: 2. setup nodejs...
       uses: actions/setup-node@v1
     
+
+    - name: 3. install hexo...
+      run: |
+        npm install hexo-cli -g
+        npm install
+        
+    - name: 4. hexo generate public files...
+      run: |
+        hexo clean
+        hexo g  
