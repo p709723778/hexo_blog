@@ -1,38 +1,37 @@
-on:
-  - push
+
+name: Hexo Auto-Deploy
+on: [push]
 
 jobs:
   build:
-    runs-on: ubuntu-18.04
+    name: Hexo Auto-Deploy by GitHub Actions
+    runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout master branch
-        uses: actions/checkout@master
-        with:
-          fetch-depth: 1
-
-      - name: Setup nodejs
-        uses: dcodeIO/setup-node-nvm@master
-        with:
-          node-version: node
-          node-mirror: https://nodejs.org/download/v8-canary/
-
-      - name: Dependency install
-        run: |
-          npm install -g cnpm --registry=https://registry.npm.taobao.org
-          cnpm install -g hexo-cli
-          cnpm install
-          cnpm install
+    - name: 1. git checkout...
+      uses: actions/checkout@v1
       
-      - name: Clean And Regenerate 
-        run: |
-          ./node_modules/.bin/hexo clean
-          ./node_modules/.bin/hexo generate
-          
-      - name: Deploy
-        env: 
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        run: |
-          git config --global user.name "Soto.Pu"
-          git config --global user.email "p709723778@126.com"
-          sed -i "s/gh_token/${ACCESS_TOKEN}/g" ./_config.yml
-          ./node_modules/.bin/hexo deploy
+    - name: 2. setup nodejs...
+      uses: actions/setup-node@v1
+    
+    - name: 3. install hexo...
+      run: |
+        npm install hexo-cli -g
+        npm install
+        
+    - name: 4. hexo generate public files...
+      run: |
+        hexo clean
+        hexo g  
+
+    - name: 5. hexo deploy ...
+      run: |
+        mkdir -p ~/.ssh/
+        echo "${{ secrets.GITHUB_ACTION }}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan github.com >> ~/.ssh/known_hosts
+        
+        git config --global user.name "p709723778"
+        git config --global user.email "p709723778@126.com"
+        
+        hexo d
