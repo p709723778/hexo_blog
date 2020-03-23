@@ -1,42 +1,48 @@
+# workflow name
+name: Hexo Blog CI
 
-name: Hexo Auto-Deploy
-on: [push]
-
-jobs:
-  build:
-    name: Hexo Auto-Deploy by GitHub Actions
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: 1. git checkout...
-      uses: actions/checkout@v1
+# master branch on push, auto run
+on: 
+  push:
+    branches:
+      - master
       
-    - name: 2. setup nodejs...
-      uses: actions/setup-node@v1
+jobs:
+  build: 
+    runs-on: ubuntu-latest 
+        
+    steps:
+    # check it to your workflow can access it
+    # from: https://github.com/actions/checkout
+    - name: Checkout Repository master branch
+      uses: actions/checkout@master 
+      
+    # from: https://github.com/actions/setup-node  
+    - name: Setup Node.js 10.x 
+      uses: actions/setup-node@master
+      with:
+        node-version: "10.x"
     
-    - name: 3. install hexo...
+    - name: Setup Hexo Dependencies
       run: |
         npm install hexo-cli -g
         npm install
+    
+    - name: Setup Deploy Private Key
+      env:
+        HEXO_DEPLOY_PRIVATE_KEY: ${{ secrets.HEXO_DEPLOY_PRIVATE_KEY}}
+      run: |
+        mkdir -p ~/.ssh/
+        echo "$HEXO_DEPLOY_PRIVATE_KEY" > ~/.ssh/id_rsa 
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan github.com >> ~/.ssh/known_hosts
         
-    - name: 4. hexo generate public files...
+    - name: Setup Git Infomation
+      run: | 
+        git config --global user.name 'Soto.Pu' 
+        git config --global user.email 'p709723778@126.com'
+    - name: Deploy Hexo 
       run: |
         hexo clean
-        hexo g  
-
-    - name: 5. hexo deploy ...
-      env:
-        GH_REF: git@github.com:p709723778/hexo_blog.git # GitHub 仓库 SSH 地址
-        GH_TOKEN: ${{ secrets.GH_TOKEN }} # 预先生成 GitHub Token
-        run: |
-          git config --global user.name "Soto.Pu"
-          git config --global user.email "p709723778@126.com"
-          git clone https://${GH_REF} .deploy_git
-          cd .deploy_git
-          git checkout master
-          cd ../
-          mv .deploy_git/.git/ ./public/
-          cd ./public/
-          git add .
-          git commit -m "CI built at `date +"%Y-%m-%d %H:%M:%S"`"
-          git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
+        hexo generate 
+        hexo deploy
