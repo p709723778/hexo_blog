@@ -1,0 +1,38 @@
+on:
+  - push
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout master branch
+        uses: actions/checkout@master
+        with:
+          fetch-depth: 1
+
+      - name: Setup nodejs
+        uses: dcodeIO/setup-node-nvm@master
+        with:
+          node-version: node
+          node-mirror: https://nodejs.org/download/v8-canary/
+
+      - name: Dependency install
+        run: |
+          npm install -g cnpm --registry=https://registry.npm.taobao.org
+          cnpm install -g hexo-cli
+          cnpm install
+          cnpm install
+      
+      - name: Clean And Regenerate 
+        run: |
+          ./node_modules/.bin/hexo clean
+          ./node_modules/.bin/hexo generate
+          
+      - name: Deploy
+        env: 
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        run: |
+          git config --global user.name "Soto.Pu"
+          git config --global user.email "p709723778@126.com"
+          sed -i "s/gh_token/${ACCESS_TOKEN}/g" ./_config.yml
+          ./node_modules/.bin/hexo deploy
