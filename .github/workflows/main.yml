@@ -2,3 +2,16 @@
 name: Hexo Auto-Deploy
 on: [push]
 
+
+jobs:
+  build:
+    name: Hexo Auto-Deploy by GitHub Actions
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 1. git checkout...
+      uses: actions/checkout@v1
+      
+    - name: 2. setup nodejs...
+      uses: actions/setup-node@v1
+    
