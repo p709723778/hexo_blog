@@ -26,7 +26,7 @@ jobs:
 
     - name: 5. hexo deploy ...
       env:
-        GH_REF: git@github.com:p709723778/hexo_blog.git # GitHub 仓库 SSH 地址
+        GH_REF: github.com/p709723778/p709723778.github.io.git # GitHub 仓库 SSH 地址
         GH_TOKEN: ${{ secrets.GH_TOKEN }} # 预先生成 GitHub Token 
         run: |
           git config --global user.name "Soto.Pu"
