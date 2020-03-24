@@ -101,7 +101,7 @@ deploy:
     repo:
     # Either syntax is supported
     github:
-      url: git@gitee.com:p709723778/p709723778.git
+      url: git@github.com:p709723778/p709723778.github.io.git
       branch: master
     gitee:
       url: git@gitee.com:p709723778/p709723778.git
