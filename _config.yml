@@ -98,8 +98,8 @@ theme: ayer
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-    repo:
-    # Either syntax is supported
+  type: 'git'
+  repo:
     github: git@github.com:p709723778/p709723778.github.io.git,master
     gitee:
       url: git@gitee.com:p709723778/p709723778.git
