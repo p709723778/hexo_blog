@@ -15,18 +15,19 @@ jobs:
     # check it to your workflow can access it
     # from: https://github.com/actions/checkout
     - name: Checkout Repository master branch
-      uses: actions/checkout@master 
+      uses: actions/checkout@master
       
     # from: https://github.com/actions/setup-node  
-    - name: Setup Node.js 10.x 
+    - name: Setup Node.js 12.x 
       uses: actions/setup-node@master
       with:
-        node-version: "10.x"
+        node-version: 12.x
     
     - name: Setup Hexo Dependencies
       run: |
-        npm install hexo-cli -g
-        npm install
+        #npm install hexo-cli -g
+        #npm install
+        npm test
     
     - name: Setup Deploy Private Key
       env:
