@@ -153,6 +153,9 @@ search: true
 # RSS
 rss: /atom.xml
 
+# DarkMode
+darkmode: true
+
 # Comment：1、Valine (recommended)；2、Gitalk
 
 # 1、Valine [A fast, simple & powerful comment system](https://github.com/xCss/Valine)
@@ -293,7 +296,7 @@ Use Tocbot to parse the title tags (h1~h6) in the content and insert the directo
 
 	``` md
 	---
-  toc: false
+  no_toc: true
   ---
 	```
 
