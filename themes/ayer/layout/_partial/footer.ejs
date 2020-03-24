@@ -30,7 +30,7 @@
       <li>
         <!-- cnzz统计 -->
         <% if (theme.cnzz&&theme.cnzz.enable){ %>
-          <script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_<%= theme.cnzz.cnzz_id%>'%3E%3C/span%3E%3Cscript src='https://s4.cnzz.com/z_stat.php%3Fid%<%= theme.cnzz.cnzz_id%>%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+         <script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_<%= theme.cnzz.id%>'%3E%3C/span%3E%3Cscript src='https://s4.cnzz.com/z_stat.php%3Fid%3D<%= theme.cnzz.id%>%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
         <!-- <script type="text/javascript" src='<%= theme.cnzz.url%>'></script> -->
         <% } %>
       </li>
