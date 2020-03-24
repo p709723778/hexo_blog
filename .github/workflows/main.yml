@@ -36,7 +36,6 @@ jobs:
       run: |
             git clone https://${Github_Pages} .github_pages
             cd .github_pages
-            git checkout -b master
             cd ../
             mv .github_pages/.git/ ./public/
             cd ./public/
