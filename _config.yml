@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: Soto
 subtitle: ''
 description: ''
 keywords:
-author: John Doe
-language: en
+author: Soto Pu
+language: zh
 timezone: ''
 
 # URL
@@ -99,6 +99,13 @@ theme: ayer
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: 'git'
-  #repo: git@github.com:p709723778/p709723778.github.io.git
-  repo: https://github.com/p709723778/p709723778.github.io.git
+
+  repo:
+  github: https://github.com/p709723778/p709723778.github.io.git
+  gitee:  https://gitee.com/p709723778/p709723778.git
+
   branch: master
+
+
+
+
