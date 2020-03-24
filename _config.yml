@@ -99,5 +99,6 @@ theme: ayer
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: 'git'
-  repo: git@github.com:p709723778/p709723778.github.io.git # https://github.com/TJ-XiaJiaHao/TJ-XiaJiaHao.github.io
+  #repo: git@github.com:p709723778/p709723778.github.io.git
+  repo: https://github.com/p709723778/p709723778.github.io.git
   branch: master
