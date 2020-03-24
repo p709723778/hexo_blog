@@ -100,7 +100,9 @@ theme: ayer
 deploy:
     repo:
     # Either syntax is supported
-    github: https://github.com/user/project.git,master
+    github:
+      url: git@gitee.com:p709723778/p709723778.git
+      branch: master
     gitee:
       url: git@gitee.com:p709723778/p709723778.git
       branch: master
