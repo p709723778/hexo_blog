@@ -1,7 +1,6 @@
 # workflow name
 name: Hexo Blog CI
 
-
 # master branch on push, auto run
 on: 
   push:
@@ -26,7 +25,7 @@ jobs:
     
     - name: Setup Hexo Dependencies
       run: |
-        npm install hexo-cli -g
+        npm install hexo --save
         npm install
         npm test
     
@@ -43,7 +42,7 @@ jobs:
       run: | 
         git config --global user.name 'Soto.Pu' 
         git config --global user.email 'p709723778@126.com'
-    - name: Deploy Hexo 
+    - name: Deploy Hexo
       run: |
         npm run build
         #hexo clean
