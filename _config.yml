@@ -100,10 +100,10 @@ theme: ayer
 deploy:
   type: 'git'
   repo:
-    github: git@github.com:p709723778/p709723778.github.io.git,master
-#    gitee:
-#      url: git@gitee.com:p709723778/p709723778.git
-#      branch: master
+#    github: git@github.com:p709723778/p709723778.github.io.git,master
+    gitee:
+      url: git@gitee.com:p709723778/p709723778.git
+      branch: master
       
       
 #  type: 'git'
