@@ -98,11 +98,19 @@ theme: ayer
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: 'git'
-  repo:
-  github: git@github.com:p709723778/p709723778.github.io.git # https://github.com/TJ-XiaJiaHao/TJ-XiaJiaHao.github.io
-  gitee:  git@gitee.com:p709723778/p709723778.git
-  branch: master
+    repo:
+    # Either syntax is supported
+    github: https://github.com/user/project.git,master
+    gitee:
+      url: git@gitee.com:p709723778/p709723778.git
+      branch: master
+      
+      
+#  type: 'git'
+#  repo:
+#  github: git@github.com:p709723778/p709723778.github.io.git # https://github.com/TJ-XiaJiaHao/TJ-XiaJiaHao.github.io
+#  gitee:  git@gitee.com:p709723778/p709723778.git
+#  branch: master
 
 
 
