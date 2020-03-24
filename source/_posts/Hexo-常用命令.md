@@ -1,10 +1,8 @@
 ---
 title: Hexo 常用命令
 date: 2020-03-24 21:30:11
-categories: 
-- Hexo
-tags:
-- Hexo
+categories: [Hexo]
+tags: [博客, Hexo]
 ---
 
 
