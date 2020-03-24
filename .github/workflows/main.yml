@@ -28,23 +28,38 @@ jobs:
         npm install hexo --save
         npm install
         npm test
-    
+            
     - name: Setup Deploy Private Key
-      env:
-        HEXO_DEPLOY_PRIVATE_KEY: ${{ secrets.HEXO_DEPLOY_PRIVATE_KEY}}
-      run: |
-        mkdir -p ~/.ssh/
-        echo "$HEXO_DEPLOY_PRIVATE_KEY" > ~/.ssh/id_rsa 
-        chmod 600 ~/.ssh/id_rsa
-        ssh-keyscan github.com >> ~/.ssh/known_hosts
+        Github_Pages: github.com/p709723778/p709723778.github.io
+        Github_Token: ${{ secrets.HEXO_DEPLOY_PRIVATE_KEY }}
         
-    - name: Setup Git Infomation
-      run: | 
-        git config --global user.name 'Soto.Pu' 
-        git config --global user.email 'p709723778@126.com'
-    - name: Deploy Hexo
-      run: |
-        npm run build
+        run: |
+            git clone https://${Github_Pages} .github_pages
+            cd .github_pages
+            git checkout -b master
+            cd ../
+            mv .github_pages/.git/ ./public/
+            cd ./public/
+            git add .
+            git commit -F ../commit-message.log
+            git push --force --quiet "https://${Github_Token}@${Github_Pages}" master:master
+            
+            
+     # env:
+       # HEXO_DEPLOY_PRIVATE_KEY: ${{ secrets.HEXO_DEPLOY_PRIVATE_KEY}}
+     # run: |
+     #   mkdir -p ~/.ssh/
+     #   echo "$HEXO_DEPLOY_PRIVATE_KEY" > ~/.ssh/id_rsa
+      #  chmod 600 ~/.ssh/id_rsa
+       # ssh-keyscan github.com >> ~/.ssh/known_hosts
+        
+    #- name: Setup Git Infomation
+    #  run: |
+    #    git config --global user.name 'Soto.Pu'
+    #    git config --global user.email 'p709723778@126.com'
+    #- name: Deploy Hexo
+    #  run: |
+    #    npm run build
         #hexo clean
         #hexo generate 
         #hexo deploy
