@@ -4,9 +4,9 @@ menu:
   归档: /archives
   分类: /categories
   标签: /tags
-  旅行: /tags/旅行/
-  摄影: http://shenyu-vip.lofter.com
-  关于我: /2019/about
+  旅行: /
+  摄影: /
+  关于我: /
 
 # 站点次标题和打字动效
 # https://github.com/mattboldt/typed.js
@@ -128,7 +128,7 @@ gitalk:
 # GitHub Ribbons-封面右上角的forkme
 github: 
   # (关闭请设置为false)
-  url: https://github.com/Shen-Yu/hexo-theme-ayer
+  url: https://github.com/p709723778
 
 # 访问量统计(不蒜子)
 busuanzi:
@@ -148,7 +148,7 @@ baidu_analytics: ''
 mathjax: false
 
 # 网站成立年份(默认为 2019，若填入年份小于当前年份，则显示为 2018-2019 类似的格式)
-since: 2015
+since: 2019
 
 # 是否显示页脚信息(建议保留，有助于本主题的推广)
 pageFooter: true
@@ -157,4 +157,4 @@ pageFooter: true
 icp:
   enable: false
   url: 'http://www.beian.miit.gov.cn/' # 备案链接
-  text: '浙ICP备88888888' # 备案信息
+  text: '粤ICP备88888888' # 备案信息
