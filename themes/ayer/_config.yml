@@ -138,7 +138,7 @@ busuanzi:
 # 友盟cnzz统计(url填js代码src链接)
 cnzz:
   enable: true
-  url: https://s9.cnzz.com/z_stat.php?id=1278069914&web_id=1278069914
+  url: https://s4.cnzz.com/z_stat.php?id=1278713204&web_id=1278713204
 
 # Google Analytics
 google_analytics: ''
@@ -146,7 +146,7 @@ google_analytics: ''
 baidu_analytics: ''
 
 # 数学公式
-mathjax: false
+mathjax: true
 
 # 网站成立年份(默认为 2019，若填入年份小于当前年份，则显示为 2018-2019 类似的格式)
 since: 2019
