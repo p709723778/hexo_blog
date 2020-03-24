@@ -30,9 +30,9 @@ jobs:
         npm test
             
     - name: Setup Deploy Private Key
-        Github_Pages: github.com/p709723778/p709723778.github.io
-        Github_Token: ${{ secrets.HEXO_DEPLOY_PRIVATE_KEY }}
-        
+        env:
+            Github_Pages: github.com/p709723778/p709723778.github.io
+            Github_Token: ${{ secrets.HEXO_DEPLOY_PRIVATE_KEY }}
         run: |
             git clone https://${Github_Pages} .github_pages
             cd .github_pages
