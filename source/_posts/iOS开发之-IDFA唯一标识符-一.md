@@ -55,3 +55,6 @@ BOOL isEnabled = [[ASIdentifierManager sharedManager] isAdvertisingTrackingEnabl
 
 Demo下载地址:
 [https://download.csdn.net/download/p709723778/11256212](https://download.csdn.net/download/p709723778/11256212)
+
+[点击下载](/download/testIDFA.zip)
+
