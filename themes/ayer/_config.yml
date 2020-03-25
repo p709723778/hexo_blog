@@ -6,6 +6,7 @@ menu:
   标签: /tags
   旅行: /
   摄影: /
+  #相册: /photos
   关于我: /about
 
 # 站点次标题和打字动效
@@ -32,7 +33,7 @@ logo: /images/ayer-side.svg
 cover:
   enable: true
   path: /images/cover1.jpg  # images目录下附送多张美图，可更换
-  logo: /images/ayer.svg #/images/ayer.svg，如果不要直接设置成false
+  logo: false #/images/ayer.svg，如果不要直接设置成false
 
 # 页面顶部进度条  
 progressBar: true
@@ -40,7 +41,7 @@ progressBar: true
 
 # 网易云音乐插件
 music:
-  enable: true
+  enable: false
   # 播放器尺寸类型(1：小尺寸、2：大尺寸)
   type: 1
   id: 26237342  # 网易云分享的音乐ID(更换音乐请更改此配置项)
