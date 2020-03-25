@@ -1,5 +1,5 @@
 ---
-title: Sourcetree 一直提示 password required
+title: Sourcetree ~ 不停的提示 password required
 date: 2020-03-25 15:26:53
 tags: [Sourcetree]
 categories: [开发工具]
