@@ -54,7 +54,6 @@ BOOL isEnabled = [[ASIdentifierManager sharedManager] isAdvertisingTrackingEnabl
 >小结:<br>1.限制广告追踪开关切换会导致变化;<br>2.重置手机也会导致变化<br>总结:由于各种不稳定,个人建议使用 `IDFV + KeyChain` 做为用户的设备唯一标识,此方式会在后面继续讲解.
 
 Demo下载地址:
-[https://download.csdn.net/download/p709723778/11256212](https://download.csdn.net/download/p709723778/11256212)
 
 [点击下载](/download/testIDFA.zip)
 
