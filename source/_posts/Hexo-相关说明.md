@@ -13,14 +13,14 @@ no_word_count: true
 
 | 命令                      |       命令说明       |
 | :----------------------- | :------------------: |
-| $ hexo new "My New Post" |       创建文章       |
-| $ hexo server             |       启动服务       |
-| $ hexo generate           |     生成静态文件     |
-| $ hexo deploy             |      hexo 部署       |
-| $ hexo clean              | hexo生成静态文件清除 |
-| $ hexo new page categories | 创建分类 |
-| $ hexo new page tags | 创建标签 |
-| $ hexo new page photos | 创建相册 |
+| hexo new "My New Post" |       创建文章       |
+| hexo server             |       启动服务       |
+| hexo generate           |     生成静态文件     |
+| hexo deploy             |      hexo 部署       |
+| hexo clean              | hexo生成静态文件清除 |
+| hexo new page categories | 创建分类 |
+| hexo new page tags | 创建标签 |
+| hexo new page photos | 创建相册 |
 
 <br/>
 
