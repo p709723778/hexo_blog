@@ -9,7 +9,7 @@ categories: [iOS开发]
 
 要使用IDFA首先要导入系统库 `@import AdSupport;`
 
-```
+```objc
 @property(nonatomic, readonly) NSUUID *advertisingIdentifier;
 ```
 >IDFA是每个设备特有的字母数字串，仅用于服务广告。(官方解释)<br>
@@ -47,7 +47,7 @@ categories: [iOS开发]
 
 - **官方也提供了广告跟踪是否可用的接口**
 
-```
+```objc
 BOOL isEnabled = [[ASIdentifierManager sharedManager] isAdvertisingTrackingEnabled];
 ```
 
