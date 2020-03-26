@@ -42,3 +42,9 @@ no_word_count: true
 >
 > 更多插件,请查看[hexo插件市场](https://hexo.io/plugins/)
 
+
+
+# 图床
+
+推荐使用：[SM.MS](https://sm.ms/)，[聚合图床](https://www.superbed.cn/)
+
