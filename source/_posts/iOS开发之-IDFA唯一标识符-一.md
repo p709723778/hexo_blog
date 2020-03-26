@@ -22,7 +22,7 @@ categories: [iOS开发]
 
 #### 1.设置 -> 通用 -> 还原 -> 抹掉所有内容和设置
 
-{% asset_img 截图1.webp 预览效果 %}
+{% asset_img 截图1.png 预览效果 %}
 
 #### 2.设置 -> 隐私 -> 广告 -> 限制广告跟踪(开 / 关)
 
@@ -30,18 +30,18 @@ categories: [iOS开发]
 >关闭时: 可以获取到IDFA
 >打开时: 无法获取到IDFA
 
-{% asset_img 截图2.webp 预览效果 %}
+{% asset_img 截图2.png 预览效果 %}
 
 
 >a.打开限制的情况下
 
-{% asset_img 截图3.webp 预览效果 %}
+{% asset_img 截图3.png 预览效果 %}
 
 
 
 >b.关闭限制的情况下
 
-{% asset_img 截图4.webp 预览效果 %}
+{% asset_img 截图4.png 预览效果 %}
 
 
 
