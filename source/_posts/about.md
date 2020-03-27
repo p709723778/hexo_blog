@@ -5,7 +5,8 @@ tags: [about]
 no_word_count: true
 ---
 
-> An iOS Engineer, live in Shenzhen, Guangdong, China.
+> An iOS Engineer, Live in Shenzhen, Guangdong, China.
+
 
 <img style="margin-top: 3px" align="left" src="/2020/03/24/about/2.png"  alt="姓名" />&nbsp; <font face="黑体" size=1 >Soto Pu </font>
 <img style="margin-top: 5px" align="left" src="/2020/03/24/about/3.png"  alt="微信" />&nbsp; <font face="黑体" size=1>p709723778 </font>
@@ -17,5 +18,7 @@ no_word_count: true
 <img style="margin-top: 8px" align="left" src="/2020/03/24/about/4.png"  alt="邮箱" />&nbsp; <font face="黑体" size=1>p709723778@126.com </font>
 
 
-
 {% asset_img avatar.png 预览效果 %}
+
+
+
