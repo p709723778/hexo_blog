@@ -17,7 +17,7 @@ no_word_count: true
 | hexo server             |       启动服务       |
 | hexo generate           |     生成静态文件     |
 | hexo deploy             |      hexo 部署       |
-| hexo clean              | hexo生成静态文件清除 |
+| hexo clean              | hexo清理编译文件 |
 | hexo new page categories | 创建分类 |
 | hexo new page tags | 创建标签 |
 | hexo new page photos | 创建相册 |

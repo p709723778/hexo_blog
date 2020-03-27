@@ -13,12 +13,12 @@ categories: [iOS开发]
 
 ### 中英文翻译
 
-|       英文        |         中文         |      |
-| :---------------: | :------------------: | ---- |
-|  Local Variable   |       局部变量       |      |
-|     Argument      | 实际参数(内容上下文) |      |
-|  Static Variable  |       静态变量       |      |
-|  Global Variable  |       全局变量       |      |
-|     Register      |        寄存器        |      |
-| Instance Variable |       实例变量       |      |
-|    Expression     |        表达式        |      |
+|       英文        |         中文         |
+| :---------------: | :------------------: |
+|  Local Variable   |       局部变量       |
+|     Argument      | 实际参数(内容上下文) |
+|  Static Variable  |       静态变量       |
+|  Global Variable  |       全局变量       |
+|     Register      |        寄存器        |
+| Instance Variable |       实例变量       |
+|    Expression     |        表达式        |
