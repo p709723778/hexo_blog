@@ -14,7 +14,7 @@
   </a>
   <br>
   <a href="https://github.com/Shen-Yu/hexo-theme-ayer/releases" target="_blank" rel="noopener noreferrer">
-    <img alt="GitHub release" src="https://img.shields.io/badge/release-v1.9-blue.svg">
+    <img alt="GitHub release" src="https://img.shields.io/badge/release-v2.0-blue.svg">
   </a> 
  <img alt="language" src="https://img.shields.io/badge/language-ejs--stylus-orange.svg">
   <a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener noreferrer">
@@ -98,13 +98,15 @@ cover:
   logo: /images/ayer.svg
 
 # ProgressBar  
-progressBar: ture
+progressBar: true
 
 # Article Setting
 # (Use this to excerpt if article is too long：<!--more-->)
 excerpt_link: Read More...
 excerpt_all: false
 
+# Copy code button
+copy_btn: true
 # Share
 share_enable: true
 # If you are not in China, maybe you prefer to set:false
@@ -156,6 +158,14 @@ rss: /atom.xml
 # DarkMode
 darkmode: true
 
+# ClickLove
+clickLove: false
+
+# articleWidth and sidebarWidth
+layout:
+  article_width: 80rem
+  sidebar_width: 8rem
+
 # Comment：1、Valine (recommended)；2、Gitalk
 
 # 1、Valine [A fast, simple & powerful comment system](https://github.com/xCss/Valine)
@@ -199,8 +209,14 @@ google_analytics: ''
 # Baidu Analytics
 baidu_analytics: ''
 
-# mathjax
+# Mathjax Support
 mathjax: true
+
+# Katex Support
+katex:
+  enable: false # true
+  allpost: true
+  copy_tex: false
 
 # since year
 since: 2019
