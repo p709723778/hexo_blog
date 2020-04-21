@@ -37,3 +37,28 @@ categories: [iOS开发]
 
 
 
+|        字段         |                             含义                             |
+| :-----------------: | :----------------------------------------------------------: |
+| Incident Identifier |    报告的唯一标识符，两份报告决不会共享同一个事件标识符。    |
+|  CrashReporter Key  | 每个设备的匿名标识符，来自同一设备的两个报告将包含相同的值。 |
+|   Hardware Model    |                           设备类型                           |
+|       Process       |            进程名称[进程 id]，进程通常是 app 名字            |
+|        Path         |                       可执行程序的位置                       |
+|     Identifier      |                 App包名,例如:com.xxx.appName                 |
+|       Version       |                          App版本号                           |
+|      Code Type      |                           CPU 架构                           |
+|        Role         |                在发生Crash时进程的的task_role                |
+|   Parent Process    |   父进程，iOS中App通常都是单进程的，一般父进程都是 launchd   |
+|      Date/Time      |                Crash发生的时间，可读的字符串                 |
+|     Launch Time     |                       程序开始运行时间                       |
+|     OS Version      |                     系统版本（build 号）                     |
+|  Baseband Version   |                           基带版本                           |
+|   Report Version    | Crash日志的格式，目前基本上都是104，不同的version里面包含的字段可能有不同 |
+|   Exception Type    |                           异常类型                           |
+|   Exception Codes   |                           异常代码                           |
+| Termination Signal  |                           终止信号                           |
+| Termination Reason  |                           终止原因                           |
+| Terminating Process |                           终止进程                           |
+| Triggered by Thread |                           引发线程                           |
+|    Binary Images    |                          二进制映像                          |
+
