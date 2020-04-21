@@ -27,6 +27,10 @@ categories: [iOS开发]
 
 - Xcode 上查看: Xcode -> Window -> Organizer -> Archives -> 选中你打包的Archive -> 右击Show In Finder -> 目标Archive -> 右键显示包内容-> dSYMs -> xxxx.app.dSYM
 
+~~很久之前iTunes Connect -> 我的App -> 对应App -> 活动 -> 所有构建版本 -> 选择对应构建版本 -> 包含符号~~
+
+~~包含符号这里之前是可以"下载dSYM"文件,现在苹果不提供下载功能~~
+
   
 
 ## 3.dSYM 文件结构
