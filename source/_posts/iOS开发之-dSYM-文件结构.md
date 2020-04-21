@@ -25,7 +25,9 @@ categories: [iOS开发]
 
 - 通过 Finder 目录查找: Users -> Home -> Library -> Developer -> Xcode/Archives -> 找到对应的.xcarchive -> 右键显示包内容-> dSYMs -> xxxx.app.dSYM
 
--  Xcode 上查看: Xcode -> Window -> Organizer -> Archives -> 选中你打包的Archive -> 右击Show In Finder -> 目标Archive -> 右键显示包内容-> dSYMs -> xxxx.app.dSYM
+- Xcode 上查看: Xcode -> Window -> Organizer -> Archives -> 选中你打包的Archive -> 右击Show In Finder -> 目标Archive -> 右键显示包内容-> dSYMs -> xxxx.app.dSYM
+
+  
 
 ## 3.dSYM 文件结构
 
