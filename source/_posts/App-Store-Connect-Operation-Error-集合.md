@@ -1,17 +1,21 @@
 ---
 title: iOS开发之 ~ App Store Connect Operation Error 集合
-date: 2020-04-24 19:10:52
+date: 2020-01-24 19:10:52
 tags: [iOS]
 categories: [iOS开发]
 ---
 
 ### 一 、常用的上传工具
 
-###### 1. Transporter (macOS / Windows / Linux都有提供) 推荐
+###### 1. Transporter GUI工具 推荐
+
+使用说明: https://help.apple.com/itc/transporter/
+
+###### 2. iTMSTransporter (macOS / Windows / Linux都有提供) 推荐
 
 使用说明: https://help.apple.com/itc/transporteruserguide/
 
-###### 2. ~~Application Loader (集成在Xcode内部，但是该工具已经被苹果弱化) ~~   不推荐
+###### 3. ~~Application Loader (集成在Xcode内部，但是该工具已经被苹果弱化) ~~   不推荐
 
 使用说明: https://help.apple.com/itc/apploader/
 
@@ -47,6 +51,30 @@ categories: [iOS开发]
   <span style="color:green">解决方案:安装lipo命令工具或者最新Command LIne Tools</span>
 
 ------
+
+
+
+- ERROR ITMS-90535:
+
+  "Unexpected CFBundleExecutable Key. The bundle at `'**/*.app/xxxx.bundle'` does not contain a bundle executable. If this bundle intentionally does not contain an executable, consider removing the `CFBundleExecutable` key from its Info.plist and using a CFBundlePackageType of BNDL. If this bundle is part of a third-party framework, consider contacting the developer of the framework for an update to address this issue."
+
+  <span style="color:green">解决方案:找到工程中.bundle对应的plist文件 删除Executable file配置的哪一行，即可</span>
+
+------
+
+
+
+- WARN: WARNING ITMS-90737: 
+
+  "Invalid Document Configuration. Document Based Apps should support either the Document Browser (UISupportsDocumentBrowser = YES) or implement Open In Place (LSSupportsOpeningDocumentsInPlace = YES/NO). Visit https://developer.apple.com/document-based-apps/ for more information."
+
+  <span style="color:green">解决方案:在工程配置文件info.plist中增加Supports Document Browser字段并设置其值为YES</span>
+
+------
+
+
+
+
 
 
 
