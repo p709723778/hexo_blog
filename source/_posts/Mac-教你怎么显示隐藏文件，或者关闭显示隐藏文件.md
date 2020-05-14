@@ -1,5 +1,5 @@
 ---
-title: Mac ~ Mac ~ 教你怎么显示隐藏文件，或者关闭显示隐藏文件
+title: Mac ~ 教你怎么显示隐藏文件，或者关闭显示隐藏文件
 date: 2015-05-14 17:07:36
 tags: [Mac]
 categories: [Mac]
