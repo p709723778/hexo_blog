@@ -1,6 +1,6 @@
 ---
 title: Mac ~ 如何解决 app已损坏，打不开。你应该将它移到废纸篓
-date: 2017-12-11 16:42:33
+date: 2017-12-11 16:40:20
 tags: [Mac]
 categories: [Mac]
 ---
