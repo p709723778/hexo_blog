@@ -69,3 +69,14 @@ categories: [iOS开发]
 |      Binary Images       | 二进制映像                                                   |
 | Last Exception Backtrace | 最后异常回溯，一般根据这个代码就能找到crash的具体问题        |
 
+
+
+Crash分析工具推荐
+
+- SYM
+
+https://github.com/zqqf16/SYM
+
+- dSYMTools
+
+https://github.com/answer-huang/dSYMTools
