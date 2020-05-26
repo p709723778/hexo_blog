@@ -4,10 +4,9 @@ menu:
   归档: /archives
   分类: /categories
   标签: /tags
-  旅行: /
-  摄影: /photos
-  关于我: /2015/03/24/about
-
+  旅行: /tags/旅行/
+  摄影: http://shenyu-vip.lofter.com
+  关于我: /2019/about
 
 # 站点次标题和打字动效
 # https://github.com/mattboldt/typed.js
@@ -21,8 +20,7 @@ subtitle:
   loop: true # 是否循环
   backSpeed: 100 # 回退速度
   showCursor: true # 是否显示光标
-  
-language: zh-CN
+
 # 网站图标和侧边栏logo
 favicon: /favicon.ico
 logo: /images/ayer-side.svg
@@ -36,15 +34,6 @@ cover:
 
 # 页面顶部进度条
 progressBar: true
-
-
-# 网易云音乐插件
-music:
-  enable: false
-  # 播放器尺寸类型(1：小尺寸、2：大尺寸)
-  type: 1
-  id: 26237342  # 网易云分享的音乐ID(更换音乐请更改此配置项)
-  autoPlay: true  # 是否开启自动播放
 
 # 文章配置
 # 文章太长，截断按钮文字(在需要截断的行增加此标记：<!--more-->)
@@ -88,9 +77,9 @@ reward_type: 2
 # 打赏wording
 reward_wording: "请我喝杯咖啡吧~"
 # 支付宝二维码图片地址，跟你设置logo的方式一样。比如：/images/alipay.jpg
-alipay: /images/alipay.jpg
+alipay: https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/alipay.jpg
 # 微信二维码图片地址
-weixin: /images/wechat.jpg
+weixin: https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/wechat.jpg
 
 # 版权声明
 # 版权声明type设定：0-关闭版权声明； 1-文章对应的md文件里有copyright: true属性，才有版权声明； 2-所有文章均有版权声明
@@ -108,7 +97,9 @@ rss: /atom.xml
 darkmode: true
 
 # 页面点击小红心(开启请设置为true)
-clickLove: true
+clickLove: false
+# 页面点击烟花效果(开启请设置为true)
+clickBoom: false
 
 # 页面宽度自定义（不建议修改，可能造成布局混乱），article_width文章宽度，sidebar_width侧边栏宽度
 layout:
@@ -121,9 +112,8 @@ layout:
 # 启用Valine必须先创建leancloud应用， 获取 id|key 填入即可
 leancloud:
   enable: true
-  app_id: R62nu0tFBeThG33C8K4fY8r0-gzGzoHsz
-  app_key: n4AuFvlWuowdXyxfyrfWtk9n
-
+  app_id: #
+  app_key: #
 # Valine配置
 valine:
   enable: true # 是否启用
@@ -159,7 +149,15 @@ minivaline:
 github:
   # (关闭请设置为false)
   enable: true
-  url: https://github.com/p709723778
+  url: https://github.com/Shen-Yu/hexo-theme-ayer
+
+# 网易云音乐插件
+music:
+  enable: false
+  # 播放器尺寸类型(1：小尺寸、2：大尺寸)
+  type: 1
+  id: 22707008 # 网易云分享的音乐ID(更换音乐请更改此配置项)
+  autoPlay: true # 是否开启自动播放
 
 # 访问量统计(不蒜子)
 busuanzi:
@@ -168,8 +166,7 @@ busuanzi:
 # 友盟cnzz统计(url填js代码src链接)
 cnzz:
   enable: true
-  id: 1278713204
-  url: https://s4.cnzz.com/z_stat.php?id=1278713204&web_id=1278713204
+  url: https://s9.cnzz.com/z_stat.php?id=1278069914&web_id=1278069914
 
 # Google Analytics
 google_analytics: ""
@@ -186,7 +183,7 @@ katex:
   copy_tex: false
 
 # 网站成立年份(默认为 2019，若填入年份小于当前年份，则显示为 2018-2019 类似的格式)
-since: 2012
+since: 2015
 
 # 是否显示页脚信息(建议保留，有助于本主题的推广)
 pageFooter: true
@@ -194,5 +191,5 @@ pageFooter: true
 #ICP备案信息尾部显示
 icp:
   enable: false
-  url: 'http://www.beian.miit.gov.cn/' # 备案链接
-  text: '粤ICP备88888888' # 备案信息
+  url: "http://www.beian.miit.gov.cn/" # 备案链接
+  text: "浙ICP备88888888" # 备案信息
