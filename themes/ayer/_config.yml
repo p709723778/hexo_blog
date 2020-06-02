@@ -96,10 +96,20 @@ rss: /atom.xml
 # 是否启用黑夜模式开关
 darkmode: true
 
+# 动态背景效果: 0-关闭，1-动态线条(跟随鼠标)
+canvas_bg: 0
+
+# 自定义鼠标样式，直接替换/images/mouse.cur文件
+mouse:
+  enable: false
+  path: /images/mouse.cur
+
 # 页面点击小红心(开启请设置为true)
 clickLove: true
-# 页面点击烟花效果(开启请设置为true)
+# 页面点击-粒子烟花效果(开启请设置为true)
 clickBoom: true
+# 页面点击-爆炸烟花效果(开启请设置为true)
+clickBoom2: false
 
 # 页面宽度自定义（不建议修改，可能造成布局混乱），article_width文章宽度，sidebar_width侧边栏宽度
 layout:
@@ -130,20 +140,6 @@ gitalk:
   repo: # Repository name
   owner: # GitHub ID
   admin: # GitHub ID
-
-# 3、MiniValine
-# See: https://github.com/MiniValine/MiniValine
-minivaline:
-  enable: false
-  placeholder: Write a Comment # Comment box placeholder
-  adminEmailMd5: # The MD5 of Admin Email to show Admin Flag.
-  math: true # Support MathJax.
-  md: true # Support Markdown.
-  # MiniValine's display language depends on user's browser or system environment
-  # If you want everyone visiting your site to see a uniform language, you can set a force language value
-  # Available values: en  | zh-CN | (and many more)
-  # More i18n info: https://github.com/MiniValine/minivaline-i18n
-  lang:
 
 # GitHub Ribbons-封面右上角的forkme，换样式直接在source/images目录下替换forkme图片
 github:
