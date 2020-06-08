@@ -3,9 +3,11 @@
 <h3 align="center">一个安静且优雅的 Hexo 主题</h3>
 
 <p align="center">
-
-  <img alt="LICENSE" src="https://img.shields.io/badge/LICENSE-SATA-red">
+  <a href="https://github.com/Shen-Yu/hexo-theme-ayer/blob/master/LICENSE" target="_blank" rel="noopener noreferrer"><img alt="LICENSE" src="https://img.shields.io/badge/LICENSE-SATA-red">
+  </a>
+  <a href="https://shen-yu.gitee.io" target="_blank" rel="noopener noreferrer">
    <img alt="platform" src="https://img.shields.io/badge/platform-PC--ios--android-ea5a76.svg">
+   </a>
   <br>
   <a href="https://travis-ci.org/Shen-Yu/hexo-theme-ayer?branch=master" target="_blank" rel="noopener noreferrer">
     <img alt="travis-ci" src="https://travis-ci.org/Shen-Yu/hexo-theme-ayer.svg?branch=master">
@@ -171,12 +173,8 @@ mouse:
   enable: false
   path: /images/mouse.cur
 
-# ClickLove
-clickLove: false
-# ClickBoom style 1
-clickBoom: false
-# ClickBoom style 2
-clickBoom2: false
+# Click effect: 0-close，1-love，2-boom，3-particles
+click_effect: 0
 
 # articleWidth and sidebarWidth
 layout:
@@ -230,6 +228,7 @@ baidu_analytics: ''
 mathjax: true
 
 # Katex Support
+# note: need change the hexo-renderer，npm un hexo-renderer-marked -S && npm i hexo-renderer-markdown-it-katex -S
 katex:
   enable: false # true
   allpost: true
