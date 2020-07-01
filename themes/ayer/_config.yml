@@ -122,7 +122,7 @@ layout:
 github:
   # (关闭请设置为false)
   enable: true
-  url: https://github.com/Shen-Yu/hexo-theme-ayer
+  url: https://github.com/p709723778
 
 # 网易云音乐插件
 music:
@@ -134,7 +134,7 @@ music:
 
 # 访问量统计(不蒜子)
 busuanzi:
-  enable: true
+  enable: false
 
 # 友盟cnzz统计(url填js代码src链接)
 cnzz:
