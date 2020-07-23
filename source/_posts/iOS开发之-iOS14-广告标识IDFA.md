@@ -16,6 +16,17 @@ categories: [iOS开发]
 
 2.iOS14下新增了IDFA 权限申请 API 添加申请权限的代码,代码如下:
 
+
+
+​	首先要导入系统框架
+
+```objc
+@import AdSupport;
+@import AppTrackingTransparency;
+```
+
+​	适配代码
+
 ```objc
 + (NSString *)idfa
 {
