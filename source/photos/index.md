@@ -4,6 +4,8 @@ date: 2020-03-25 11:07:43
 no_valine: true
 share_enable: false
 albums: [
+["https://i.loli.net/2020/08/03/VTzmGIQXUkPWBb7.jpg","公司楼下车展"],
+["https://i.loli.net/2020/08/03/FORfcSBZu3DisbQ.jpg","和平精英"],
 ["https://i.loli.net/2020/07/28/N51szRJLFkeQAtw.jpg","大鹏小吃"],
 ["https://i.loli.net/2020/07/28/gDlnRrYzLEMvfU2.jpg","大鹏首饰"],
 ["https://i.loli.net/2020/07/28/dz1YkuDR6CVMxEn.jpg","较场尾海边"],
