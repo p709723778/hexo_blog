@@ -35,6 +35,12 @@ cover:
 # 页面顶部进度条
 progressBar: true
 
+# 告示板模块
+broadcast:
+  enable: true # true开启，false关闭
+  type: 2 # 1：自定义输入，2：一言api(https://hitokoto.cn/)
+  text: 一个安静优雅的hexo主题，快速且响应式。 # type为1时有效
+
 # 文章配置
 # 文章太长，截断按钮文字(在需要截断的行增加此标记：<!--more-->)
 excerpt_link: 阅读更多...
@@ -162,11 +168,37 @@ since: 2015
 # 是否显示页脚信息(建议保留)
 pageFooter: true
 
-#ICP备案信息尾部显示
+# ICP备案信息尾部显示
 icp:
   enable: false
   url: "http://www.beian.miit.gov.cn/" # 备案链接
   text: "浙ICP备88888888" # 备案信息
+# 公安备案信息尾部显示
+gongan:
+  enable: false
+  img: /images/beian.png #公安备案图片
+  url: "http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=01234567890123" #公安备案链接
+  text: "浙公网安备01234567890123号" #公安备案信息
+
+# 友情链接
+friends_link:
+  Ayer主题: #网站名称
+    #网站地址
+    url: https://github.com/Shen-Yu/hexo-theme-ayer
+    #网站图片(可忽略不写)
+    img: /images/ayer.png
+  GitHub:
+    url: https://github.com/Shen-Yu
+    img: https://i.loli.net/2020/09/07/indb4PRYDA98EkN.png
+  码云:
+    url: https://gitee.com/shen-yu
+    img: https://i.loli.net/2020/09/07/K3AqO7h6krQFlRX.png
+  Hexo官网:
+    url: https://hexo.io
+    img: https://i.loli.net/2020/09/07/UYGzjo7h68CRWny.png
+  Hexo图表插件:
+    url: https://github.com/Shen-Yu/hexo-tag-chart
+    img: https://i.loli.net/2020/09/07/GIXBYE5SoylhR1r.png
 
 # 评论：1、Valine(推荐)；2、Gitalk；3、MiniValine
 

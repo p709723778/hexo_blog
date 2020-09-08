@@ -121,6 +121,12 @@ cover:
 # ProgressBar  
 progressBar: true
 
+# Boardcast
+broadcast:
+  enable: true
+  type: 2 # 1：custom，2：hitokoto api(https://hitokoto.cn/)
+  text: a clean and elegant theme, fast and responsive. # only work in custom mode
+
 # Article Setting
 # (Use this to excerpt if article is too long：<!--more-->)
 excerpt_link: Read More...
@@ -254,6 +260,39 @@ since: 2019
 
 # pageFooter (Set true can let more people know this theme, Thanks!)
 pageFooter: true
+
+# only for chinese website
+# ICP
+icp:
+  enable: false
+  url: "http://www.beian.miit.gov.cn/"
+  text: "浙ICP备88888888"
+# gongan
+gongan:
+  enable: false
+  img: /images/beian.png
+  url: "http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=01234567890123" #link
+  text: "浙公网安备01234567890123号"
+
+# friends link
+friends_link:
+  Ayer: #site name
+    # site url
+    url: https://github.com/Shen-Yu/hexo-theme-ayer
+    # site icon(optional)
+    img: /images/ayer.png
+  GitHub:
+    url: https://github.com/Shen-Yu
+    img: https://i.loli.net/2020/09/07/indb4PRYDA98EkN.png
+  gitee:
+    url: https://gitee.com/shen-yu
+    img: https://i.loli.net/2020/09/07/K3AqO7h6krQFlRX.png
+  Hexo:
+    url: https://hexo.io
+    img: https://i.loli.net/2020/09/07/UYGzjo7h68CRWny.png
+  hexo-tag-chart:
+    url: https://github.com/Shen-Yu/hexo-tag-chart
+    img: https://i.loli.net/2020/09/07/GIXBYE5SoylhR1r.png
 ```
 
 ## Plugins
@@ -314,6 +353,20 @@ layout: "categories"
 
 ## Tags
 Same as categories.
+
+## Friend Links
+``` bash
+hexo new page friends
+```
+Then paste following codes to file: /source/friends/index.md
+``` md
+---
+title: friends
+type: friends
+layout: "friends"
+---
+```
+Then edit `friends_link` in `_config.yml` 
 
 ## Gallery
 Need to write in the head of the markdown, this is not a good way to write, I hope to get a better way to write on github.
