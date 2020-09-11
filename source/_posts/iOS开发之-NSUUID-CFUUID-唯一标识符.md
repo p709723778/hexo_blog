@@ -21,6 +21,8 @@ CFRelease(cfuuid);
 
 获得的这个CFUUID值系统并没有存储。每次调用CFUUIDCreate，系统都会返回一个新的唯一标示符。
 
+<!--more-->
+
 ### NSUUID
 
 `NSUUID`在iOS 6中才出现，这跟`CFUUID`几乎完全一样，只不过它是Objective-C接口。+ (id)UUID 是一个类方法，调用该方法可以获得一个UUID。通过下面的代码可以获得一个UUID字符串：

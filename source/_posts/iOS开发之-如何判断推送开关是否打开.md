@@ -27,7 +27,7 @@ typedef enum {
 
 如果是 `UIRemoteNotificationTypeNone` ，则可以认为推送开关没有打开，反之亦然。
 
-
+<!--more-->
 
 - iOS8以后
 

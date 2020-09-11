@@ -17,7 +17,7 @@ categories: [Mac]
 chflags nohidden ~/Library/
 ```
 
-
+<!--more-->
 
 - 隐藏
 

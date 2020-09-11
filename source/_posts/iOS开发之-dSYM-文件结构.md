@@ -11,7 +11,7 @@ categories: [iOS开发]
 
 - Xcode 上查看: Xcode -> Window -> Devices and Simulators -> 选中Crash的设备 -> View Device Logs -> This Device -> 找到对应的进程crash文件 -> 右键Export Log -> 保存到需要保存的位置
 
-
+<!--more-->
 
 ## 2. 获取 dSYM 符号表
 

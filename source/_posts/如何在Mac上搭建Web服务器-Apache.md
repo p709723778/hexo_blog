@@ -14,6 +14,8 @@ a.启动 Apache 命令 :   `sudo apachectl start`
 b.停止 Apache 命令 :   `sudo apachectl stop`
 c.重启 Apache 命令 :   `sudo apachectl restart`
 
+<!--more-->
+
 # 2.Apache相关信息
 
 a.Apache服务器默认的web根目录在：`/Library/WebServer/Documents`

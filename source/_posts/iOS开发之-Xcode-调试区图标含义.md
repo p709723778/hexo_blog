@@ -11,6 +11,8 @@ categories: [iOS开发]
 
 {% asset_img 截图1.png 预览效果 %}
 
+<!--more-->
+
 ### 中英文翻译
 
 |       英文        |         中文         |

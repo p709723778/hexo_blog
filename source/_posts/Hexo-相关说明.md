@@ -22,7 +22,11 @@ no_word_count: true
 | hexo new page tags | 创建标签 |
 | hexo new page photos | 创建相册 |
 
+<!--more-->
+
 <br/>
+
+
 
 # Hexo 插件
 

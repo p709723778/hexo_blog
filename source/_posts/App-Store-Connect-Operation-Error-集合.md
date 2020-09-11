@@ -21,6 +21,8 @@ categories: [iOS开发]
 
 <br/>
 
+<!--more-->
+
 ### 二 、上传App Store Connect提示的错误以及解决方案
 
 
