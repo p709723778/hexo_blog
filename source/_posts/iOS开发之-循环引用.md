@@ -1,7 +1,8 @@
 ---
 title: iOS开发之 ~ 循环引用
-date: 2020-09-11 11:32:51
-tags:
+date: 2016-12-11 11:32:51
+tags: [iOS]
+categories: [iOS开发]
 ---
 
 
@@ -112,5 +113,81 @@ bVc.delegate = self;
 
 NSTimer 的 target 对传入的参数都是强引用（即使是 weak 对象）
 
+```objc
+/// 一般使用NSTimer代码如下
+
+- (void)viewDidLoad {
+    NSTimer *timer = [[NSTimer alloc] initWithFireDate:[NSDate date] interval:1 target:self selector:@selector(timerFire) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
+    self.timer = timer;
+}
+ 
+- (void)timerFire {
+    NSLog(@"timer fire");
+}
+```
+
 {% asset_img 1.png 预览效果 %}
 
+`解决方案:` 
+
+1. `在ViewController执行dealloc前释放timer（不推荐）`
+2. `对定时器NSTimer封装`
+3. `苹果API新增3个接口解决循环引用（iOS 10.0以上可用）`
+4. `使用block进行解决`
+5. `使用NSProxy进行解决`
+
+此处就介绍第2种方案,后续详细介绍其他方式
+
+```objc
+#import <Foundation/Foundation.h>
+
+@interface NSTimer (STBlocks)
+
++ (NSTimer *)st_scheduledTimeWithTimeInterval:(NSTimeInterval)interval
+                                         block:(void(^)())block
+                                       repeats:(BOOL)repeats;
+
+@end
+
+
+#import "NSTimer+STBlocks.h"
+
+@implementation NSTimer (STBlocks)
+
+
++ (NSTimer *)st_scheduledTimeWithTimeInterval:(NSTimeInterval)interval
+                                         block:(void(^)())block
+                                       repeats:(BOOL)repeats
+{
+    return [self scheduledTimerWithTimeInterval:interval
+                                         target:self
+                                       selector:@selector(st_blockInvoke:) userInfo:[block copy]
+                                        repeats:repeats];
+}
+
+- (void)st_blockInvoke:(NSTimer *)timer
+{
+    void (^block)() = timer.userInfo;
+    if(block)
+    {
+        block();
+    }
+}
+
+@end
+```
+
+封装后如何使用:
+
+```objc
+__weak __typeof(self) weakSelf = self;
+[NSTimer st_scheduledTimeWithTimeInterval:4.0f
+                                     block:^{
+                                         __strong __typeof(self) strongSelf = weakSelf;
+                                         [strongSelf doSomething];
+                                     }
+                                   repeats:YES];
+```
+
+> 计时器保留其目标对象，反复执行任务导致的循环，确实要注意，另外在dealloc的时候，不要忘了调用计时器中的 invalidate方法。
