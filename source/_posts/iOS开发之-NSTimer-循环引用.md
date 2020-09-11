@@ -25,7 +25,7 @@ categories: [iOS开发]
 
 由于self强引用了timer，同时timer也强引用了self，所以循环引用造成dealloc方法根本不会走，self和timer都不会被释放，造成内存泄漏。
 
-
+<!--more-->
 
 ## 2. 解决方案
 
@@ -345,3 +345,7 @@ NS_ASSUME_NONNULL_END
 ```
 
 通过STProxy这个伪基类（相当于ViewController的复制类），避免直接让timer和viewController造成循环。
+
+原理如下图:
+
+{% asset_img 1.png 原理图 %}
