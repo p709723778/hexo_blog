@@ -137,7 +137,7 @@ NSTimer 的 target 对传入的参数都是强引用（即使是 weak 对象）
 4. `使用block进行解决`
 5. `使用NSProxy进行解决`
 
-此处就介绍第2种方案,后续详细介绍其他方式
+此处就介绍第4种方案,后续详细介绍其他方式
 
 ```objc
 #import <Foundation/Foundation.h>
