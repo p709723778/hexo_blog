@@ -14,7 +14,6 @@ categories: [iOS开发]
 ```objc
 - (void)setupTimer {
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerAction) userInfo:nil repeats:YES];
-    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
 }
 
 - (void)dealloc {
@@ -82,7 +81,6 @@ categories: [iOS开发]
 - (void)startTimer{
     
     _timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(work) userInfo:nil repeats:YES];
-    [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSDefaultRunLoopMode];
 }
 
 - (void)work{
@@ -321,7 +319,6 @@ NS_ASSUME_NONNULL_END
     
     STProxy *proxy = [[STProxy alloc] initWithObjc:self];
     self.timer2 = [NSTimer scheduledTimerWithTimeInterval:1.0 target:proxy selector:@selector(timerHandle) userInfo:nil repeats:YES];
-    [[NSRunLoop currentRunLoop] addTimer:self.timer2 forMode:NSDefaultRunLoopMode];
 }
 
 //定时触发的事件
