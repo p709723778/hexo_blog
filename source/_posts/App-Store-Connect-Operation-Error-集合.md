@@ -66,7 +66,7 @@ categories: [iOS开发]
 
 
 
-- WARN: WARNING ITMS-90737: 
+- ITMS-90737: 
 
   "Invalid Document Configuration. Document Based Apps should support either the Document Browser (UISupportsDocumentBrowser = YES) or implement Open In Place (LSSupportsOpeningDocumentsInPlace = YES/NO). Visit https://developer.apple.com/document-based-apps/ for more information."
 
@@ -75,6 +75,30 @@ categories: [iOS开发]
 ------
 
 
+
+- ITMS-90809: 
+
+  此错误会有两种提示,解决方案都是一样的
+
+1. Deprecated API Usage - App updates that use UIWebView will no longer be accepted as of December 2020. Instead, use WKWebView for improved security and reliability. Learn more (https://developer.apple.com/documentation/uikit/uiwebview).
+
+  
+
+2. Deprecated API Usage - New apps that use UIWebView are no longer accepted. Instead, use WKWebView for improved security and reliability. Learn more (https://developer.apple.com/documentation/uikit/uiwebview).
+
+  <span style="color:green">解决方案:把工程里面的UIWebView 都改为 WKWebView</span>
+
+------
+
+
+
+- ITMS-90737: 
+
+  Missing Info.plist value - A value for the Info.plist key 'CFBundleIconName' is missing in the bundle 'com.xxx.xxx'. Apps built with iOS 11 or later SDK must supply app icons in an asset catalog and must also provide a value for this Info.plist key. For more information see http://help.apple.com/xcode/mac/current/#/dev10510b1f7.
+
+  <span style="color:green">解决方案:给应用配置Icon图即可</span>
+
+------
 
 
 
