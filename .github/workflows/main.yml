@@ -25,6 +25,7 @@ jobs:
     
     - name: Setup Hexo Dependencies
       run: |
+        npm install --save hexo-deployer-git
         npm install hexo --save
         npm install
         npm test
