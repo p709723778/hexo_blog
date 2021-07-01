@@ -32,7 +32,7 @@ jobs:
 
       - name: Setup Deploy Private Key
         env:
-          HEXO_DEPLOY_PRIVATE_KEY: ${{secrets.HEXO_DEPLOY_PRIVATE_KEY}}
+          HEXO_DEPLOY_PRIVATE_KEY: ${{secrets.HEXO_DEPLOY_ENV}}
         run: |
           mkdir -p ~/.ssh/
           echo "$HEXO_DEPLOY_PRIVATE_KEY" > ~/.ssh/id_rsa
@@ -40,7 +40,6 @@ jobs:
           ssh-keyscan github.com >> ~/.ssh/known_hosts
           ssh-keyscan gitee.com >> ~/.ssh/known_hosts
           echo "$HEXO_DEPLOY_PRIVATE_KEY"
-          cat ~/.ssh/id_rsa
 
       - name: Setup Git Infomation
         run: |
