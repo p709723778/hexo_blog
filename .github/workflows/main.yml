@@ -32,45 +32,7 @@ jobs:
 
       - name: Setup Deploy Private Key
         env:
-          HEXO_DEPLOY_PRIVATE_KEY: '-----BEGIN OPENSSH PRIVATE KEY-----
-                                    b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABlwAAAAdzc2gtcn
-                                    NhAAAAAwEAAQAAAYEAvN5kuiQw/UZlyibRDtDS28dpviFH+uPcaqEPvVJAC18rW0mwDBdZ
-                                    EKr4J0/a6qfOdR6n3sryGAehfl6jksGuQIeSLpV1upqrLoXNQaVeb2rNmw7+JOcmWKe2U0
-                                    HcmfiseXUNtvLJihzf1lCJ7ygHe/i+fiBbL+JN0GG4oDgSOU5Q7b84Tr0hNdTYKfreEsRD
-                                    1QEj2L8E7BjrZozRDxdyOh9UMgh0ewhL7W0Z7IZPfHhQzxs9hTHW+DLOUOTKN+OTwKoZDe
-                                    GOBww9GmYDfF4FjdlJVo3cMvgC2vNOZs4tbOIqhYpHQi1myz6y+65KWyvBYXGm8gBj/VPs
-                                    ssQGiLxmJAK5BwQtwH5V/uxQ8igJ37ry3nkFepQRIxXs1ACFYFuP411HITdEX5lwjfYlYY
-                                    dSvGQdfjP5u1y9m+zE9DnPPVM4sOMomz7PZIONoKaOt1NGuDDxxZUGdgXAjWHEYQfm3KaH
-                                    B1coqQOqkPtxr6BkBELr5KTxNKOBhstGuGPXbxodAAAFiIAMi9yADIvcAAAAB3NzaC1yc2
-                                    EAAAGBALzeZLokMP1GZcom0Q7Q0tvHab4hR/rj3GqhD71SQAtfK1tJsAwXWRCq+CdP2uqn
-                                    znUep97K8hgHoX5eo5LBrkCHki6Vdbqaqy6FzUGlXm9qzZsO/iTnJlintlNB3Jn4rHl1Db
-                                    byyYoc39ZQie8oB3v4vn4gWy/iTdBhuKA4EjlOUO2/OE69ITXU2Cn63hLEQ9UBI9i/BOwY
-                                    62aM0Q8XcjofVDIIdHsIS+1tGeyGT3x4UM8bPYUx1vgyzlDkyjfjk8CqGQ3hjgcMPRpmA3
-                                    xeBY3ZSVaN3DL4AtrzTmbOLWziKoWKR0ItZss+svuuSlsrwWFxpvIAY/1T7LLEBoi8ZiQC
-                                    uQcELcB+Vf7sUPIoCd+68t55BXqUESMV7NQAhWBbj+NdRyE3RF+ZcI32JWGHUrxkHX4z+b
-                                    tcvZvsxPQ5zz1TOLDjKJs+z2SDjaCmjrdTRrgw8cWVBnYFwI1hxGEH5tymhwdXKKkDqpD7
-                                    ca+gZARC6+Sk8TSjgYbLRrhj128aHQAAAAMBAAEAAAGADZCfhWsCBb7forRFAZ5n9pcM9j
-                                    XnuJJTC2mD+uIEbYypTYYuWb/3iqXs6s3meEITJwBLqEnFN4qcw7nCX9D/Ve0mx6e+a+ed
-                                    8dp0UomxDamLGN7ry/S6IVXyV2p8kKZ2pMaOdJxdc0j9nqPsNDwYxYOpEt/6DKdhVV0faI
-                                    p+bJU+ZMT+I1GcKASgfethtdFY2dyaGYAmt1pW1ee5QC876gbEAk/vJcMDyQqz+PPwk40E
-                                    qMtZEM7ylKL5hH/aMkdq/m8LhwEUR4+q1Zu7sXELul9I6FnbzRp0CMgvExZm9VQhxgKUPT
-                                    ZDgn50msezQnp2FttIPs/H0dQAoKq8BBOUC4IpAc4ONCSkVGXG4RieU1+pzsOwQ8fwcjWj
-                                    571l75iE6o4oDjjhdudjIi10f6mIJqgozV5ni0RyhiSMPQ4LXIVXn0suhmUizEiE43SFx6
-                                    ML72TRsiY8wQwx6NN1UbVlWTzyYCpjnJiYURX0McNp/dAtVVWFxBEp2XL9C+jh8KbVAAAA
-                                    wGDjvqzLpetDdwJ+/q1qckVam+J6utqsNW5dtt3ohQl9pwyAkQez6XQfbFEYFAXFE9JPcs
-                                    tJ43QViHI2bQ7Ifpc9mPJWje2hw3zVGsYSbyDRZdSFmX9+gSifSat6OYF2OisS1snGNMvi
-                                    m15SKUBUixL+q4CODIunbkgeSy2a/FWr7SA1YteAPzEPPw/dhY9tzKCUumfxA5Q54FPdqY
-                                    AQ+5jjlrIcP+cjsluL9vg7qzv8wqUlcPTiv36jgK3oWZP+uAAAAMEA+TSO0wuc0PG1a/q1
-                                    h4pGQD7X9zAjCTCtKOOfqsmcCeRRACvCnEcvJDPzGPbS+pX3hW71iVNxig/wq4XhJAfH93
-                                    6PFMjmmyhDJXECaif1uP3UV3ORBWa+KJGuGaPZNJ+5zD9HoSNrKXIYbW1ZyFkTB2+vLgQo
-                                    8XcxaQBE7Rd3A8CztiPTM0czDCKEJAd62ixMsPstunjlzip8ExdyqeS7+vv6DQjAhvC5k1
-                                    PuNzYFawwBQ9gFYug8hCKFxRqI63FrAAAAwQDCBLBaPQtyCoTIqEGL7bwuKrdxYYWpI60x
-                                    CxFE4lsffgjUe7XhNU+0bFCK3W0kjpQbkZ3g+nf96G0d9PVTUuCvQGyElXOD0KLrNMBsua
-                                    3LlisRTPjrS3E1r14kniwW7uC/AZMkAPBWd7nwUL1lnrtDmGIMIyXsG0sesBwWBVVrn+QR
-                                    YhHTdF07wRNHIvQX2Gkd9QpQL2LGXtUJlIy3XtO4C0WdpLsu1/2SVXuLlMAaKDlaUplkCV
-                                    +8SodATWTWnJcAAAAScDcwOTcyMzc3OEAxMjYuY29tAQ==
-                                    -----END OPENSSH PRIVATE KEY-----
-'
+          HEXO_DEPLOY_PRIVATE_KEY: ${{secrets.HEXO_DEPLOY_PRIVATE_KEY}}
         run: |
           mkdir -p ~/.ssh/
           echo "$HEXO_DEPLOY_PRIVATE_KEY" > ~/.ssh/id_rsa
