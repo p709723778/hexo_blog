@@ -32,7 +32,7 @@ jobs:
           echo "$HEXO_DEPLOY_PRIVATE_KEY"
           cd /home/runner/work/hexo_blog/hexo_blog
           ls -a
-          echo '$GITEE_PASSWORD'
+          echo "$GITEE_PASSWORD"
 
 
       # # 1、生成静态文件
