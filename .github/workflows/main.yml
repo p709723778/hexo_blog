@@ -21,6 +21,12 @@ jobs:
       # 1、生成静态文件
       - name: Build
         run: npm install && npm run build
+        
+      - name: Setup Git Infomation
+        run: |
+          git config --global user.name 'Soto.Pu'
+          git config --global user.email 'p709723778@126.com'
+
 
       # 2、部署到 GitHub Pages
       - name: Deploy
