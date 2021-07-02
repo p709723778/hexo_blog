@@ -29,11 +29,7 @@ jobs:
           HEXO_DEPLOY_PRIVATE_KEY: ${{ secrets.ACCESS_TOKEN}}
         run: |
           echo "$HEXO_DEPLOY_PRIVATE_KEY"
-          cat ~/.ssh/known_hosts
-          
-      # 1、生成静态文件
-      - name: Build
-        run: npm install && npm run build
+
 
       
 
@@ -85,3 +81,7 @@ jobs:
       #     remote_port: 22
       #     remote_user: ubuntu
       #     remote_key: ${{ secrets.MY_UBUNTU_RSA_PRIVATE_KEY }}
+
+      # 1、生成静态文件
+      - name: Build
+        run: npm install && npm run build
