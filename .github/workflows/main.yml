@@ -24,17 +24,18 @@ jobs:
           git config --global user.name 'Soto.Pu'
           git config --global user.email 'p709723778@126.com'
 
-      # 1、生成静态文件
-      - name: Build
-        run: npm install && npm run build
-
-      
       - name: Setup Deploy Private Key
         env:
           HEXO_DEPLOY_PRIVATE_KEY: ${{ secrets.ACCESS_TOKEN}}
         run: |
           echo "$HEXO_DEPLOY_PRIVATE_KEY"
           cat ~/.ssh/known_hosts
+          
+      # 1、生成静态文件
+      - name: Build
+        run: npm install && npm run build
+
+      
 
 
       # 2、部署到 GitHub Pages
