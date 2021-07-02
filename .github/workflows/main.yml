@@ -18,12 +18,14 @@ jobs:
         with:
           persist-credentials: false
 
+      #设置git配置
       - name: Setup Git Infomation
         run: |
           git config --global init.defaultBranch master
           git config --global user.name 'Soto.Pu'
           git config --global user.email 'p709723778@126.com'
 
+      #调试代码
       - name: Setup Deploy Private Key
         env:
           HEXO_DEPLOY_PRIVATE_KEY: ${{ secrets.ACCESS_TOKEN}}
