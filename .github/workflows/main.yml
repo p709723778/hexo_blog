@@ -35,12 +35,12 @@ jobs:
           echo "$GITEE_PASS_WORD"
 
 
-      # # 1、生成静态文件
-      # - name: Build
-      #   run: |
-      #     cd /home/runner/work/hexo_blog/hexo_blog
-      #     ls -a
-      #     npm install && npm run build
+      # 1、生成静态文件
+      - name: Build
+        run: |
+          cd /home/runner/work/hexo_blog/hexo_blog
+          ls -a
+          npm install && npm run build
       
 
 
