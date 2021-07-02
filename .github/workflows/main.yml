@@ -41,7 +41,7 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN}}
           REPOSITORY_NAME: p709723778/p709723778.github.io
           BRANCH: master
-          FOLDER: .deploy_git
+          FOLDER: public
           #注意这里的 public 是仓库根目录下的 public，也就是 npm run build 生成静态资源的路径，比如有的人是 `docs/.vuepress/dist`
 
       # # 3、同步到 gitee 的仓库
