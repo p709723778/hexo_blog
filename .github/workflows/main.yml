@@ -53,19 +53,19 @@ jobs:
         with:
           persist-credentials: false
 
-      - uses: actions/checkout@v2
-      - name: Use Node.js 12.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: '12.x'
+      # - uses: actions/checkout@v2
+      # - name: Use Node.js 12.x
+      #   uses: actions/setup-node@v1
+      #   with:
+      #     node-version: '12.x'
 
-      - name: Cache NPM dependencies
-        uses: actions/cache@v2
-        with:
-          path: node_modules
-          key: ${{ runner.OS }}-npm-cache
-          restore-keys: |
-            ${{ runner.OS }}-npm-cache
+      # - name: Cache NPM dependencies
+      #   uses: actions/cache@v2
+      #   with:
+      #     path: node_modules
+      #     key: ${{ runner.OS }}-npm-cache
+      #     restore-keys: |
+      #       ${{ runner.OS }}-npm-cache
 
       - name: Setup Git Infomation
         run: |
