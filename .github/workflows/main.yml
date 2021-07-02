@@ -33,6 +33,17 @@ jobs:
 
       # 2、部署到 GitHub Pages
       - name: Deploy
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN}}
+        run: |
+          # mkdir -p ~/.ssh/
+          # echo "$HEXO_DEPLOY_PRIVATE_KEY" > ~/.ssh/id_rsa 
+          # chmod 600 ~/.ssh/id_rsa
+          # ssh-keyscan github.com >> ~/.ssh/known_hosts
+          # ssh-keyscan gitee.com >> ~/.ssh/known_hosts
+          echo "$ACCESS_TOKEN"
+          cat ~/.ssh/known_hosts
+
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN}}
