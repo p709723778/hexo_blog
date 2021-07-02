@@ -35,7 +35,7 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN}}
           REPOSITORY_NAME: p709723778/p709723778.github.io
           BRANCH: master
           FOLDER: .deploy_git
