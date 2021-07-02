@@ -29,6 +29,8 @@ jobs:
           HEXO_DEPLOY_PRIVATE_KEY: ${{ secrets.ACCESS_TOKEN}}
         run: |
           echo "$HEXO_DEPLOY_PRIVATE_KEY"
+          cd /home/runner/work/hexo_blog/hexo_blog
+          ls -a
 
 
       
