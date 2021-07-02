@@ -33,47 +33,61 @@ jobs:
           publish_branch: master
 
 
-# name: Deploy GitHub Pages
+name: Deploy GitHub Pages
 
-# # 触发条件：在 push 到 master 分支后
-# on:
-#   push:
-#     branches:
-#       - master
+# 触发条件：在 push 到 master 分支后
+on:
+  push:
+    branches:
+      - master
 
-# # 任务
-# jobs:
-#   build-and-deploy:
-#     # 服务器环境：最新版 Ubuntu
-#     runs-on: ubuntu-latest
-#     steps:
-#       # 拉取代码
-#       - name: Checkout
-#         uses: actions/checkout@v2
-#         with:
-#           persist-credentials: false
+# 任务
+jobs:
+  build-and-deploy:
+    # 服务器环境：最新版 Ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      # 拉取代码
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
 
-#       - name: Setup Git Infomation
-#         run: |
-#           git config --global user.name 'Soto.Pu'
-#           git config --global user.email 'p709723778@126.com'
+      - uses: actions/checkout@v2
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+          
+      - name: Cache NPM dependencies
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: ${{ runner.OS }}-npm-cache
+          restore-keys: |
+            ${{ runner.OS }}-npm-cache
 
-#       # 1、生成静态文件
-#       - name: Build
-#         run: npm install && npm run build
+      - name: Setup Git Infomation
+        run: |
+          git config --global user.name 'Soto.Pu'
+          git config --global user.email 'p709723778@126.com'
+
+      # 1、生成静态文件
+      - name: Build
+        run: npm install && npm run build
 
       
 
 
-#       # 2、部署到 GitHub Pages
-#       - name: Deploy
-#         uses: JamesIves/github-pages-deploy-action@releases/v3
-#         with:
-#           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-#           REPOSITORY_NAME: p709723778/p709723778.github.io
-#           BRANCH: master
-          # FOLDER: .deploy_git
-          #注意这里的 public 是仓库根目录下的 public，也就是 npm run build 生成静态资源的路径，比如有的人是 `docs/.vuepress/dist`
+      # 2、部署到 GitHub Pages
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          REPOSITORY_NAME: p709723778/p709723778.github.io
+          BRANCH: master
+          FOLDER: .deploy_git
+          注意这里的 public 是仓库根目录下的 public，也就是 npm run build 生成静态资源的路径，比如有的人是 `docs/.vuepress/dist`
 
       # # 3、同步到 gitee 的仓库
       # - name: Sync to Gitee
