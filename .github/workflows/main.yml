@@ -27,11 +27,12 @@ jobs:
       - name: Setup Deploy Private Key
         env:
           HEXO_DEPLOY_PRIVATE_KEY: ${{ secrets.ACCESS_TOKEN}}
+          GITEE_PASSWORD: ${{ secrets.GITEE_PASSWORD}}
         run: |
           echo "$HEXO_DEPLOY_PRIVATE_KEY"
           cd /home/runner/work/hexo_blog/hexo_blog
           ls -a
-          echo '${secrets.GITEE_PASSWORD}'
+          echo '$GITEE_PASSWORD'
 
 
       # # 1、生成静态文件
