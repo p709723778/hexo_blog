@@ -66,7 +66,7 @@ jobs:
       #     # 注意替换为你的 Gitee 目标仓库地址
       #     destination-repo: git@gitee.com:p709723778/hexo_blog.git
 
-      # 4、部署到 Gitee Pages
+      # 4、部署到 Gitee Pages (已通过)
       - name: Build Gitee Pages
         uses: yanglbme/gitee-pages-action@main
         with:
