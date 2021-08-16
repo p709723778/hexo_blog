@@ -6,7 +6,8 @@ no_word_count: true
 ---
 
 > An iOS Engineer, Live in Shenzhen, Guangdong, China.
-
+>
+> Tags: Flutter / iOS / Android / Web
 
 <img style="margin-top: 3px" align="left" src="/2015/03/24/about/2.png"/>&nbsp; <font face="黑体" size=1 >Soto Pu </font>
 <img style="margin-top: 5px" align="left" src="/2015/03/24/about/3.png"/>&nbsp; <font face="黑体" size=1>p709723778 </font>
