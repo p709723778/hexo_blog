@@ -13,7 +13,7 @@ categories: [Flutter开发]
 void main() {
   double price = 100 / 3;
 
-  //原始值
+  //原始值， 结果为 33.333333333333336。
   print("price = $price");
 
   //舍弃当前变量的小数部分，结果为 33。返回值为 int 类型。
@@ -37,7 +37,7 @@ void main() {
   //当前变量四舍五入后取整，结果为 33.0。返回值为 double 类型。
   print("price.roundToDouble() = ${price.roundToDouble()}");
 
-  //取整: 忽略小数位,返回整数
+  //取整: 忽略小数位,返回int整数，结果为 33。
   final int number = 100 ~/ 3;
   print("number = $number");
 }
@@ -57,7 +57,7 @@ void main() {
 void main() {
   double price = 100 / 3;
 
-  //原始值
+  //原始值， 结果为 33.333333333333336。
   print("price = $price");
 
   //保留小数点后2位数，并返回字符串：33.33。
